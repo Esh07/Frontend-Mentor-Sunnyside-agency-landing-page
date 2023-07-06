@@ -1,113 +1,227 @@
-# Frontend Mentor - Sunnyside agency landing page solution
+# Sunnyside Agency Landing Page
+![image](https://github.com/Esh07/Frontend-Mentor-Sunnyside-agency-landing-page/assets/32418603/a35931ce-666a-4676-bbab-7331f482ba60)
 
-This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
+## Introduction
+Welcome to my repository for the [Sunnyside Agency Landing Page coding challenge]()! This project is a part of the Frontend Mentor challenges, which have been designed to help me enhance my coding skills by building realistic projects.
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+    - [Js Learning](#javascript-learning)
+    - [CSS learning](#css-learning)
+- [Result](#result)
 
 ## Overview
 
 ### The challenge
+The challenge is to build a landing page for the Sunnyside agency and make it look as close to the provided design as possible. The focus of this challenge is mostly on HTML and CSS, with a small amount of JavaScript included for the mobile navigation toggle. However, you can also choose to complete the challenge without using JavaScript.
 
-Users should be able to:
+## Requirements 
+
+The website should show:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution and submission link](https://www.frontendmentor.io/solutions/used-displayflex-to-handle-responsiveness-of-website-gzwh91GbZ)
+- Live Site URL: [Frontend-Mentor-Sunnyside-agency-landing-page/](https://esh07.github.io/Frontend-Mentor-Sunnyside-agency-landing-page/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
+- Semantic HTML5 markup (`<header>`, `<nav>`, `<section>`, `<footer>` and `<main>` etc)
 - CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+During this coding challenge, I had the opportunity to learn and implement various functionalities to enhance the user experience. Here are some of the key aspects I explored:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+#### JavaScript learning
+##### Menu Toggle Bar
+To create a mobile menu toggle bar, I utilized event listeners, specifically the click event, to show and hide the menu content. Here's the JavaScript code I used:
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
+
+//for menu toggle bar - Menu bar on mobile version
+var hamBurger = document.getElementById("hamBurger-icon");
+var menu = document.getElementById("menu");
+//function listen to click event
+hamBurger.addEventListener("click", () =>{
+
+    //add "open" in class if not available. second click will be removing "open" from the class.
+    hamBurger.classList.toggle("open");
+    menu.classList.toggle("menu-active");
+});
+```
+This allowed users to click the hamburger icon to toggle the menu visibility.
+
+##### Adjusting the Navigation Bar on Scroll
+I utilized the `window.onscroll` event listener and `window.pageYOffset` to adjust the navigation bar based on the user's scroll position. The navigation bar behavior included disappearing when scrolling down and reappearing as a sticky bar when scrolling up. Here's an example of the JavaScript code I used:
+
+```js
+window.onscroll = function(){
+    var currentScrollPos = window.pageYOffset;
+    if(mobile.matches){
+        if ((window.pageYOffset) == 0 ){
+            navBar.style.padding = "2rem"; navBar.style.background = "transparent";
+        }
+         else if (prevScrollpos > currentScrollPos){
+            navBar.style.paddingTop = "1rem";
+            navBar.style.paddingBottom = "1rem";
+            navBar.style.backgroundColor = "#4bc9fc";
+            navBar.style.top = "0";
+        } else{
+          navBar.style.top = "-100px";
+          navBar.style.paddingTop = "0rem";
+          navBar.style.paddingBottom = "0rem";
+      }
+
+    }
+    else{
+
+    if ((window.pageYOffset) == 0 ){
+        navBar.style.padding = "4rem";
+        navBar.style.background = "transparent";
+    }
+     else if (prevScrollpos > currentScrollPos){
+        navBar.style.paddingTop = "1rem";
+        navBar.style.paddingBottom = "1rem";
+        navBar.style.backgroundColor = "#4bc9fc";
+        navBar.style.top = "0";
+    }
+    else
+    {
+        navBar.style.top = "-100px";
+        navBar.style.paddingTop = "0rem";
+        navBar.style.paddingBottom = "0rem";
+    }
+    }
+
+    prevScrollpos = currentScrollPos;
 };
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+##### Scroll to Top Button
+To enhance user navigation, I implemented a scroll-to-top button that becomes visible when the user has scrolled halfway through the page. Here's the JavaScript code for this functionality:
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```js
+//thanks to css-trick
+//for Scroll to top behaviour 
+var scrollToTop = document.getElementById("backTotop");
+var credits = document.getElementById("credit");
+var rootElement = document.documentElement;
 
-### Continued development
+function handleScroll(){
+    var scrollable = rootElement.scrollHeight - rootElement.clientHeight;
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+    if ((rootElement.scrollTop /  scrollable) > 0.60 ){
+        scrollToTop.classList.add("enable");
+        credits.classList.add("show");
+    }
+    else {
+        scrollToTop.classList.remove("enable");
+        credit.classList.remove("show");
+    }
+};
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+document.addEventListener("scroll", handleScroll);
+```
 
-### Useful resources
+#### CSS learning
+##### Custom CSS Variables 
+I learned how to use the `:root` selector to define custom CSS variables, allowing for easier and consistent styling across the project.
+```css
+:root {
+  /* ======--- Colors ---=====*/
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+  /* Primary */
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+  --pm-soft-red: hsl(7, 99%, 70%);
+  --pm-yellow: hsl(51, 100%, 49%);
+  --pm-drk-des-cyan: hsl(167, 40%, 24%);
+  --pm-drk-bl: hsl(198, 62%, 26%);
+  --pm-drk-cyan: hsl(168, 34%, 41%);
 
-## Author
+  /* Neutral */
+  --nt-vry-drk-des-bl: hsl(212, 27%, 19%);
+  --nt-vry-drk-gry-bl: hsl(213, 9%, 39%);
+  --nt-drk--gry-bl: hsl(232, 10%, 55%);
+  --nt-gry-bl: hsl(210, 4%, 67%);
+  --nt-wht: hsl(0, 0%, 100%);
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+  /* ======--- Typo ---=====*/
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+  /* body */
+  --fs: 18px;
 
-## Acknowledgments
+  /* font */
+  --ff-1: "Barlow", sans-serif;
+  --ff-2: "Fraunces", serif;
+}
+```
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+##### Smooth Scrolling
+By utilizing the `scroll-behavior` property on the HTML element, I achieved smooth scrolling behavior, enhancing the overall user experience.
+```css
+html {
+  scroll-behavior: smooth;
+}
+```
+##### CSS Reset
+I applied a CSS reset using the universal selector `(*)` to remove default padding, margin, and box-sizing values, ensuring a clean starting point for styling.
+```css
+/* reset default property */
+* {
+  padding: 0; /* making sure element has 0 padding as default value*/
+  margin: 0; /* making sure element has 0 padding as default value*/
+  box-sizing: border-box;
+}
+```
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+##### Selectors and Typography
+I gained a deeper understanding of CSS selectors such as `:is()` and used them to define consistent typography styles for various elements like headings, buttons, links, paragraphs, spans, and list items.
+```css
+:is(p, span, li) {
+  font-family: var(--ff-1);
+  font-weight: 600;
+}
+...
+:is(h1, h2, h3, h4, h5, h6, .btn, .link) {
+  font-family: var(--ff-2);
+}
+```
+##### Fixed Navigation Bar
+I learned how to create a fixed navigation bar that remains at the top of the page using `position: fixed`. I also added transitions and other styles to enhance its appearance.
+```css
+nav {
+  ...
+  position: fixed;
+  ...
+}
+```
+##### Layout and Positioning
+Through this project, I gained hands-on experience in positioning elements within sections, using relative and absolute positioning to achieve desired layouts.
+
+##### Grid Layout
+I utilized the CSS Grid layout to create a visually appealing gallery section with four columns, allowing for a dynamic display of images.
+```css
+.gallery {
+  ...
+  display: grid;
+  align-items: center;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+```
+
+## Result
+![image](https://github.com/Esh07/Frontend-Mentor-Sunnyside-agency-landing-page/assets/32418603/b3e5ee66-7e84-4b05-a0e9-7459cbfd5a4c)
+
