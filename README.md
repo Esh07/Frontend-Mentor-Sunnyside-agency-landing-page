@@ -1,8 +1,8 @@
 # Sunnyside Agency Landing Page
-![image](https://github.com/Esh07/Frontend-Mentor-Sunnyside-agency-landing-page/assets/32418603/a35931ce-666a-4676-bbab-7331f482ba60)
+[![image](https://github.com/Esh07/Frontend-Mentor-Sunnyside-agency-landing-page/assets/32418603/a35931ce-666a-4676-bbab-7331f482ba60)](https://www.frontendmentor.io/solutions/used-displayflex-to-handle-responsiveness-of-website-gzwh91GbZ)
 
 ## Introduction
-Welcome to my repository for the [Sunnyside Agency Landing Page coding challenge]()! This project is a part of the Frontend Mentor challenges, which have been designed to help me enhance my coding skills by building realistic projects.
+Welcome to my repository for the [Sunnyside Agency Landing Page coding challenge](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef)! This project is a part of the Frontend Mentor challenges, which have been designed to help me enhance my coding skills by building realistic projects.
 ## Table of contents
 
 - [Overview](#overview)
@@ -269,5 +269,5 @@ I utilized the CSS Grid layout to create a visually appealing gallery section wi
 </details>
 
 ## Result
-![image](https://github.com/Esh07/Frontend-Mentor-Sunnyside-agency-landing-page/assets/32418603/b3e5ee66-7e84-4b05-a0e9-7459cbfd5a4c)
+[![image](https://github.com/Esh07/Frontend-Mentor-Sunnyside-agency-landing-page/assets/32418603/b3e5ee66-7e84-4b05-a0e9-7459cbfd5a4c)](https://www.frontendmentor.io/solutions/used-displayflex-to-handle-responsiveness-of-website-gzwh91GbZ)
 
