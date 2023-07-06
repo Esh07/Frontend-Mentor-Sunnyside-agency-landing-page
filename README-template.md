@@ -46,6 +46,9 @@ The website should show:
 During this coding challenge, I had the opportunity to learn and implement various functionalities to enhance the user experience. Here are some of the key aspects I explored:
 
 #### JavaScript learning
+<details>
+  <summary>Menu Toggle Bar</summary>
+  
 ##### Menu Toggle Bar
 To create a mobile menu toggle bar, I utilized event listeners, specifically the click event, to show and hide the menu content. Here's the JavaScript code I used:
 
@@ -63,6 +66,11 @@ hamBurger.addEventListener("click", () =>{
 });
 ```
 This allowed users to click the hamburger icon to toggle the menu visibility.
+</details>
+
+<details>
+  
+<summary>Adjusting the Navigation Bar on Scroll</summary>
 
 ##### Adjusting the Navigation Bar on Scroll
 I utilized the `window.onscroll` event listener and `window.pageYOffset` to adjust the navigation bar based on the user's scroll position. The navigation bar behavior included disappearing when scrolling down and reappearing as a sticky bar when scrolling up. Here's an example of the JavaScript code I used:
@@ -109,7 +117,11 @@ window.onscroll = function(){
     prevScrollpos = currentScrollPos;
 };
 ```
+</details>
 
+<details>
+  <summary>Scroll to Top Button</summary>
+  
 ##### Scroll to Top Button
 To enhance user navigation, I implemented a scroll-to-top button that becomes visible when the user has scrolled halfway through the page. Here's the JavaScript code for this functionality:
 
@@ -135,8 +147,13 @@ function handleScroll(){
 
 document.addEventListener("scroll", handleScroll);
 ```
+</details>
 
 #### CSS learning
+<details>
+
+  <summary>Custom CSS variables</summary>
+  
 ##### Custom CSS Variables 
 I learned how to use the `:root` selector to define custom CSS variables, allowing for easier and consistent styling across the project.
 ```css
@@ -168,7 +185,11 @@ I learned how to use the `:root` selector to define custom CSS variables, allowi
   --ff-2: "Fraunces", serif;
 }
 ```
+</details>
 
+<details>
+  <summary>Smooth Scrolling </summary>
+  
 ##### Smooth Scrolling
 By utilizing the `scroll-behavior` property on the HTML element, I achieved smooth scrolling behavior, enhancing the overall user experience.
 ```css
@@ -176,6 +197,11 @@ html {
   scroll-behavior: smooth;
 }
 ```
+</details>
+
+<details>
+  <summary>CSS Reset</summary>
+  
 ##### CSS Reset
 I applied a CSS reset using the universal selector `(*)` to remove default padding, margin, and box-sizing values, ensuring a clean starting point for styling.
 ```css
@@ -186,7 +212,11 @@ I applied a CSS reset using the universal selector `(*)` to remove default paddi
   box-sizing: border-box;
 }
 ```
+</details>
 
+<details>
+  <summary>Selectors and Typography</summary>
+  
 ##### Selectors and Typography
 I gained a deeper understanding of CSS selectors such as `:is()` and used them to define consistent typography styles for various elements like headings, buttons, links, paragraphs, spans, and list items.
 ```css
@@ -199,6 +229,11 @@ I gained a deeper understanding of CSS selectors such as `:is()` and used them t
   font-family: var(--ff-2);
 }
 ```
+</details>
+
+<details>
+  <summary>Fixed Navigation Bar</summary>
+  
 ##### Fixed Navigation Bar
 I learned how to create a fixed navigation bar that remains at the top of the page using `position: fixed`. I also added transitions and other styles to enhance its appearance.
 ```css
@@ -208,8 +243,17 @@ nav {
   ...
 }
 ```
+</details>
+
+<details>
+  <summary>Layout and Positioning</summary>
+  
 ##### Layout and Positioning
 Through this project, I gained hands-on experience in positioning elements within sections, using relative and absolute positioning to achieve desired layouts.
+</details>
+
+<details>
+  <summary>Grid Layout</summary>
 
 ##### Grid Layout
 I utilized the CSS Grid layout to create a visually appealing gallery section with four columns, allowing for a dynamic display of images.
@@ -221,6 +265,8 @@ I utilized the CSS Grid layout to create a visually appealing gallery section wi
   grid-template-columns: 25% 25% 25% 25%;
 }
 ```
+
+</details>
 
 ## Result
 ![image](https://github.com/Esh07/Frontend-Mentor-Sunnyside-agency-landing-page/assets/32418603/b3e5ee66-7e84-4b05-a0e9-7459cbfd5a4c)
